@@ -1,33 +1,30 @@
-//Global variables
+// Global Variables
 
-// Sets random number
-var randomNumber = [];
+// Random number between 19-120
+var randomNumber =Math.floor(Math.random()*101 + 19)
+console.log(randomNumber);
 
-// Resets game
-var pauseGame = false
-
-// Array for wins
-var wins = [];
-
-// Array for losses
-var losses = [];
-
-// Array for total score
-var totalScore
-
-// Crystals
-var crystals = ["crystal1", "crystal2", "crystal3", "crystal4"];
-
-// Assigns specific value to crystals
-var crystalValues
 
 
 //============================================================================
 
 // Game code
 
-// Function to reset game
-resetGame()
+// // Function to reset game
+// resetGame()
+
+// Generates a random number between 19-120 at start of game
+$(document).ready(function(){
+    var randomNumber =Math.floor(Math.random()*101 + 19)
+
+// Appends random number to randomnumber id in HTML
+$('#randomnumber').text(randomNumber);
+
+console.log(randomNumber);
+
+}
+)
+
 
 // .click Function to set up onclick event for crystals
 
