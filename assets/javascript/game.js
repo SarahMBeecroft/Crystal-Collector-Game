@@ -1,8 +1,17 @@
 // Global Variables
 
-// Random number between 19-120
-var randomNumber =Math.floor(Math.random()*101 + 19)
+// Selects random number between 19-120
+var randomNumber = Math.floor(Math.random()*101 + 19)
 console.log(randomNumber);
+
+// Selects random number for crystals between 1-12
+var crystal1 = Math.floor(Math.random()*11 + 1)
+
+var crystal2 = Math.floor(Math.random()*11 + 1)
+
+var crystal3 = Math.floor(Math.random()*11 + 1)
+
+var crystal4 = Math.floor(Math.random()*11 + 1)
 
 
 
@@ -20,7 +29,36 @@ $(document).ready(function(){
 // Appends random number to randomnumber id in HTML
 $('#randomnumber').text(randomNumber);
 
-console.log(randomNumber);
+// Sets up random number between 1-12 for each crystal
+var crystal1 = Math.floor(Math.random()*11 + 1)
+
+var crystal2 = Math.floor(Math.random()*11 + 1)
+
+var crystal3 = Math.floor(Math.random()*11 + 1)
+
+var crystal4 = Math.floor(Math.random()*11 + 1)
+
+// User's total scare
+var totalScore
+
+// User's wins
+var wins = 0;
+
+// User's losses
+var losses = 0;
+
+// Assigns wins and losses for HTML
+$('#wins').text(wins);
+$('#losses').text(losses);
+$('#totalScore').text(totalScore);
+
+// Sets up on.click function for each crystal
+
+$('#crystal1').click(function() {
+    alert( "Handler for .click() called." );
+  });
+
+
 
 }
 )
