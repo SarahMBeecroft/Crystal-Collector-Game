@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Collectors Game</title>
+    <!-- Links to reset CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css" type="text/css" charset="utf-8" />
+    <!-- Links to CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" charset="utf-8" />
+</head>
+
+<body>
+
+    <header>
+
+
+    </header>
+
+    <div class="container">
+
+        <h1>Crystal Collectors Game</h1>
+
+        <h2>Directions</h2>
+
+        <ul>
+            <li>You are given a random number at the start of each game.</li>
+            <li>Click on any of the 4 crystals shown below to add a specific amount of points to your total score.</li>
+            <li>You win when you match your total score to the random number assigned to you at the beginning of the game.</li>
+            <li>You lose if the total score goes above the random number.</li>
+            <li>The value of crystals is hidden until you click on it and the values reset with each new game.</li>
+        </ul>
+
+        <!-- Starts game when user clicks a crystal -->
+        <h4>Random Number:</h4>
+        <div id="randomNumber"></div>
+
+        <h4>Wins:</h4>
+        <div id="wins"></div>
+
+        <h4>Loses:</h4>
+        <div id="losses"></div>
+
+        <!-- Images of crystals go here in container -->
+
+        <h4>Total Score:</h4>
+        <div id="totalScore"></div>
+
+    </div>
+
+
+    <!-- Links to JS -->
+    <script src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>
