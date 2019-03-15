@@ -16,7 +16,7 @@ var losses = [];
 var totalScore
 
 // Crystals
-var crystals = [];
+var crystals = ["crystal1", "crystal2", "crystal3", "crystal4"];
 
 // Assigns specific value to crystals
 var crystalValues
