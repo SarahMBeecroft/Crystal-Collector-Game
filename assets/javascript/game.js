@@ -44,66 +44,86 @@ $(document).ready(function(){
 // Appends random number to randomnumber id in HTML
     $('#randomnumber').html(randomNumber); 
 
+// Function to updates user's wins and losses
+// Adds plus 1 to wins
+function winner(){
+    alert("You won!");
+      wins++; 
+      $('#wins').html(wins);
+      reset();
+    }
+// Adds plus 1 to losses
+function loser(){
+    alert ("You lose!");
+      losses++;
+      $('#losses').html(losses);
+      reset()
+    }
 
-
-// Assigns wins and losses for HTML
-$('#wins').html(wins);
-$('#losses').html(losses);
 
 // Sets up on.click function for each crystal
+// Crystal 1 
 $('#crystal1').on ('click', function(){
-    $('#totalscore').html(crystal1); 
+    totalScore = totalScore + crystal1;
+   
+    $('#totalscore').text(totalScore); 
 
-        // Sets up win and lose conditions  
+        // Sets win and lose conditions
         if (totalScore == randomNumber){
           winner();
         }
-        else if (totalScore > Random){
+        else if (totalScore > randomNumber){
           loser();
-        }
-}); 
+        }   
+  })  
 
+// Crystal 2
 $('#crystal2').on ('click', function(){
     totalScore = totalScore + crystal1;
-    $('#totalscore').html(crystal1); 
+   
+    $('#totalscore').text(totalScore); 
 
-        // Sets up win and lose conditions  
+        // Sets win and lose conditions
         if (totalScore == randomNumber){
           winner();
         }
-        else if (totalScore > Random){
+        else if (totalScore > randomNumber){
           loser();
-        }
-}); 
+        }   
+  })  
 
+// Crystal 3 
 $('#crystal3').on ('click', function(){
     totalScore = totalScore + crystal1;
-    $('#totalscore').html(crystal1); 
+   
+    $('#totalscore').text(totalScore); 
 
-        // Sets up win and lose conditions  
+        // Sets win and lose conditions
         if (totalScore == randomNumber){
           winner();
         }
-        else if (totalScore > Random){
+        else if (totalScore > randomNumber){
           loser();
-        }
-}); 
+        }   
+  })  
 
+// Crystal 4
 $('#crystal4').on ('click', function(){
     totalScore = totalScore + crystal1;
-    $('#totalscore').html(crystal1); 
+   
+    $('#totalscore').text(totalScore); 
 
-        // Sets up win and lose conditions  
+        // Sets win and lose conditions
         if (totalScore == randomNumber){
           winner();
         }
-        else if (totalScore > Random){
+        else if (totalScore > randomNumber){
           loser();
-        }
-}); 
+        }   
+  })  
 
 
-// User's total scare
+  // User's total scare
 var totalScore = 0;
 // Appends total score to totalscore id in HTML
 $('#totalscore').text(totalScore); 
