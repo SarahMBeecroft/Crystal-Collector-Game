@@ -1,15 +1,14 @@
 // Global Variables
 
 // Selects random number between 19-120
-var randomNumber = Math.floor(Math.random()*101 + 19)
+var randomNumber = Math.floor(Math.random()*101 + 19);
 console.log(randomNumber);
 
 // Selects random number for crystals between 1-12
-var crystal1 = Math.floor(Math.random()*11 + 1)
-var crystal2 = Math.floor(Math.random()*11 + 1)
-var crystal3 = Math.floor(Math.random()*11 + 1)
-var crystal4 = Math.floor(Math.random()*11 + 1)
-
+var crystal1 = Math.floor(Math.random()*11 + 1);
+var crystal2 = Math.floor(Math.random()*11 + 1);
+var crystal3 = Math.floor(Math.random()*11 + 1);
+var crystal4 = Math.floor(Math.random()*11 + 1);
 
 // User's wins
 var wins = 0;
@@ -21,33 +20,39 @@ var losses = 0;
 
 // Game code
 
-// // Function to reset game
-// resetGame()
+// Function to reset the game
+function reset(){
+    // Resets random number
+    randomNumber=Math.floor(Math.random()*101+19);
+    
+    // Resets random crystal numbers
+    $('#randomnumber').html(Random);
+    crystal1= Math.floor(Math.random()*11+1);
+    crystal2= Math.floor(Math.random()*11+1);
+    crystal3= Math.floor(Math.random()*11+1);
+    crystal4= Math.floor(Math.random()*11+1);
+
+    // Resets total score
+    totalScore= 0;
+    $('#finalTotal').text(userTotal);
+    } 
 
 // Generates a random number between 19-120 at start of game
 $(document).ready(function(){
-    var randomNumber =Math.floor(Math.random()*101 + 19)
+    var randomNumber = Math.floor(Math.random()*101 + 19);
 
 // Appends random number to randomnumber id in HTML
-$('#randomnumber').text(randomNumber);
+    $('#randomnumber').html(randomNumber); 
 
-// Sets up random number between 1-12 for each crystal
-var crystal1 = Math.floor(Math.random()*11 + 1)
-var crystal2 = Math.floor(Math.random()*11 + 1)
-var crystal3 = Math.floor(Math.random()*11 + 1)
-var crystal4 = Math.floor(Math.random()*11 + 1)
 
-// User's total scare
-var totalScore = 0;
 
 // Assigns wins and losses for HTML
-$('#wins').text(wins);
-$('#losses').text(losses);
+$('#wins').html(wins);
+$('#losses').html(losses);
 
 // Sets up on.click function for each crystal
 $('#crystal1').on ('click', function(){
-    totalScore = totalScore + crystal1;
-    $('#totalscore').text(crystal1); 
+    $('#totalscore').html(crystal1); 
 
         // Sets up win and lose conditions  
         if (totalScore == randomNumber){
@@ -60,7 +65,7 @@ $('#crystal1').on ('click', function(){
 
 $('#crystal2').on ('click', function(){
     totalScore = totalScore + crystal1;
-    $('#totalscore').text(crystal1); 
+    $('#totalscore').html(crystal1); 
 
         // Sets up win and lose conditions  
         if (totalScore == randomNumber){
@@ -73,7 +78,7 @@ $('#crystal2').on ('click', function(){
 
 $('#crystal3').on ('click', function(){
     totalScore = totalScore + crystal1;
-    $('#totalscore').text(crystal1); 
+    $('#totalscore').html(crystal1); 
 
         // Sets up win and lose conditions  
         if (totalScore == randomNumber){
@@ -86,7 +91,7 @@ $('#crystal3').on ('click', function(){
 
 $('#crystal4').on ('click', function(){
     totalScore = totalScore + crystal1;
-    $('#totalscore').text(crystal1); 
+    $('#totalscore').html(crystal1); 
 
         // Sets up win and lose conditions  
         if (totalScore == randomNumber){
@@ -107,6 +112,8 @@ $('#totalscore').text(totalScore);
 
 
 
+
+// end of game function 
 }
 )
 
@@ -118,9 +125,9 @@ $('#totalscore').text(totalScore);
 
 
 // Resets game once user's total score matches random number OR user goes over random number and loses
-function resetGame() {
-    randomNumber = totalScore
-    pauseGame = false
+// function resetGame() {
+//     randomNumber = totalScore
+//     pauseGame = false
 
 // Gets a new random number
 
@@ -133,8 +140,8 @@ function resetGame() {
     
 
 // Function to update the DOM
-    updateDisplay()
-}
+    // updateDisplay()
+
 
 // Updates HTML to show random number, wins, loses, and total score
 
@@ -144,3 +151,7 @@ $('#regTitle').html('Hello World');
 //This is the getter of the innerHTML property in jQuery
 var helloWorld = $('#regTitle').html();
 
+// Resets game once user reaches max guesses (change for crystal game)
+// function resetGame() {
+//     numGuess = maxGuess
+//     pauseGame = false
