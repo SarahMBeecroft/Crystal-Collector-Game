@@ -16,9 +16,24 @@ var wins = 0;
 // User's losses
 var losses = 0;
 
+// User's total scare
+var totalScore = 0;
+
+// Audio for crystal noises
+var crystalSound1 = document.createElement("audio")
+var crystalSound2 = document.createElement("audio")
+var crystalSound3 = document.createElement("audio")
+var crystalSound4 = document.createElement("audio")
+crystalSound1.setAttribute("src", "assets/audio/crystal1.wav")
+crystalSound2.setAttribute("src", "assets/audio/crystal2.wav")
+crystalSound3.setAttribute("src", "assets/audio/crystal3.wav")
+crystalSound4.setAttribute("src", "assets/audio/crystal4.wav")
+
 //============================================================================
 
 // Game code
+
+// Game functions
 
 // Function to reset the game
 function reset(){
@@ -26,7 +41,7 @@ function reset(){
     randomNumber=Math.floor(Math.random()*101+19);
     
     // Resets random crystal numbers
-    $('#randomnumber').html(Random);
+    $('#randomnumber').html(randomNumber);
     crystal1= Math.floor(Math.random()*11+1);
     crystal2= Math.floor(Math.random()*11+1);
     crystal3= Math.floor(Math.random()*11+1);
@@ -34,15 +49,9 @@ function reset(){
 
     // Resets total score
     totalScore= 0;
-    $('#finalTotal').text(userTotal);
+    $('#totalscore').text(totalScore);
     } 
 
-// Generates a random number between 19-120 at start of game
-$(document).ready(function(){
-    var randomNumber = Math.floor(Math.random()*101 + 19);
-
-// Appends random number to randomnumber id in HTML
-    $('#randomnumber').html(randomNumber); 
 
 // Function to updates user's wins and losses
 // Adds plus 1 to wins
@@ -52,24 +61,39 @@ function winner(){
       $('#wins').html(wins);
       reset();
     }
+
 // Adds plus 1 to losses
 function loser(){
     alert ("You lose!");
       losses++;
       $('#losses').html(losses);
-      reset()
+      reset();
     }
+
+
+// Game begins      
+// Generates a random number between 19-120 at start of game
+$(document).ready(function(){
+    var randomNumber = Math.floor(Math.random()*101 + 19);
+
+// Appends random number to randomnumber id in HTML
+$('#randomnumber').html(randomNumber); 
 
 
 // Sets up on.click function for each crystal
 // Crystal 1 
 $('#crystal1').on ('click', function(){
+
+    // Plays audio for crystal click
+    $(crystalSound1).trigger('play');
+
+    // Adds crystal score to total score
     totalScore = totalScore + crystal1;
    
     $('#totalscore').text(totalScore); 
 
         // Sets win and lose conditions
-        if (totalScore == randomNumber){
+        if (totalScore === randomNumber){
           winner();
         }
         else if (totalScore > randomNumber){
@@ -79,12 +103,17 @@ $('#crystal1').on ('click', function(){
 
 // Crystal 2
 $('#crystal2').on ('click', function(){
-    totalScore = totalScore + crystal1;
+
+    // Plays audio for crystal click
+    $(crystalSound2).trigger('play');
+
+    // Adds crystal score to total score
+    totalScore = totalScore + crystal2;
    
     $('#totalscore').text(totalScore); 
 
         // Sets win and lose conditions
-        if (totalScore == randomNumber){
+        if (totalScore === randomNumber){
           winner();
         }
         else if (totalScore > randomNumber){
@@ -94,12 +123,17 @@ $('#crystal2').on ('click', function(){
 
 // Crystal 3 
 $('#crystal3').on ('click', function(){
-    totalScore = totalScore + crystal1;
+
+    // Plays audio for crystal click
+    $(crystalSound3).trigger('play');
+
+    // Adds crystal score to total score
+    totalScore = totalScore + crystal3;
    
     $('#totalscore').text(totalScore); 
 
         // Sets win and lose conditions
-        if (totalScore == randomNumber){
+        if (totalScore === randomNumber){
           winner();
         }
         else if (totalScore > randomNumber){
@@ -109,12 +143,17 @@ $('#crystal3').on ('click', function(){
 
 // Crystal 4
 $('#crystal4').on ('click', function(){
-    totalScore = totalScore + crystal1;
+
+    // Plays audio for crystal click
+    $(crystalSound4).trigger('play');
+
+    // Adds crystal score to total score
+    totalScore = totalScore + crystal4;
    
     $('#totalscore').text(totalScore); 
 
         // Sets win and lose conditions
-        if (totalScore == randomNumber){
+        if (totalScore === randomNumber){
           winner();
         }
         else if (totalScore > randomNumber){
@@ -122,56 +161,20 @@ $('#crystal4').on ('click', function(){
         }   
   })  
 
-
-  // User's total scare
-var totalScore = 0;
-// Appends total score to totalscore id in HTML
-$('#totalscore').text(totalScore); 
-
-
-
-
-
-
-// end of game function 
 }
 )
 
 
-// .click Function to set up onclick event for crystals
 
+// // Function to update the DOM
+// updateDisplay()
+// }
 
-// Makes sure key pressed is number
+// // Updates HTML to show wins, curent word, remaining guesses, and letters already guessed
+// function updateDisplay() {
+//     document.getElementById("randomnumber").innerHTML = randomNumber
+//     document.getElementById("wins").innerHTML = wins
+//     document.getElementById("losses").innerHTML = losses
+//     document.getElementById("totalscore").innerHTML = totalScore
+// }
 
-
-// Resets game once user's total score matches random number OR user goes over random number and loses
-// function resetGame() {
-//     randomNumber = totalScore
-//     pauseGame = false
-
-// Gets a new random number
-
-
-// Resets crystal numbers
-    crystals = [];
-    crystalValues = [];
-
-    // For loop to reset crystal values
-    
-
-// Function to update the DOM
-    // updateDisplay()
-
-
-// Updates HTML to show random number, wins, loses, and total score
-
-//This is the setter of the innerHTML property in jQuery
-$('#regTitle').html('Hello World');
-
-//This is the getter of the innerHTML property in jQuery
-var helloWorld = $('#regTitle').html();
-
-// Resets game once user reaches max guesses (change for crystal game)
-// function resetGame() {
-//     numGuess = maxGuess
-//     pauseGame = false

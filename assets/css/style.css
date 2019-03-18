@@ -1,10 +1,17 @@
 .container {
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-    background: white;
-    width: 1000px;
+      /* Centers */
+      margin: auto;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      text-align: center;
+      border: 8px outset white;
+      background: white; 
+      width: 1000px;
+}
+
+body {
+    /* Following prevents image from stretching  */
+    background: url("../../assets/images/diamonds.png");
 }
 
 /* Four image containers  */
