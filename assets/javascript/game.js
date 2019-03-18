@@ -19,7 +19,7 @@ var losses = 0;
 // User's total scare
 var totalScore = 0;
 
-// Audio for crystal noises
+// Audio for crystal noises and win/lose
 var crystalSound1 = document.createElement("audio")
 var crystalSound2 = document.createElement("audio")
 var crystalSound3 = document.createElement("audio")
@@ -78,7 +78,6 @@ function loser(){
 // Game begins      
 // Generates a random number between 19-120 at start of game
 $(document).ready(function(){
-    var randomNumber = Math.floor(Math.random()*101 + 19);
 
 // Appends random number to randomnumber id in HTML
 $('#randomnumber').html(randomNumber); 
