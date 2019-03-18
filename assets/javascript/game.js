@@ -24,10 +24,14 @@ var crystalSound1 = document.createElement("audio")
 var crystalSound2 = document.createElement("audio")
 var crystalSound3 = document.createElement("audio")
 var crystalSound4 = document.createElement("audio")
+var winningSound = document.createElement("audio")
+var losingSound = document.createElement("audio")
 crystalSound1.setAttribute("src", "assets/audio/crystal1.wav")
 crystalSound2.setAttribute("src", "assets/audio/crystal2.wav")
 crystalSound3.setAttribute("src", "assets/audio/crystal3.wav")
 crystalSound4.setAttribute("src", "assets/audio/crystal4.wav")
+winningSound.setAttribute("src", "assets/audio/winningsound.wav")
+losingSound.setAttribute("src", "assets/audio/losingsound.wav")
 
 //============================================================================
 
@@ -56,7 +60,7 @@ function reset(){
 // Function to updates user's wins and losses
 // Adds plus 1 to wins
 function winner(){
-    alert("You won!");
+    $(winningSound).trigger('play');
       wins++; 
       $('#wins').html(wins);
       reset();
@@ -64,7 +68,7 @@ function winner(){
 
 // Adds plus 1 to losses
 function loser(){
-    alert ("You lose!");
+    $(losingSound).trigger('play');
       losses++;
       $('#losses').html(losses);
       reset();

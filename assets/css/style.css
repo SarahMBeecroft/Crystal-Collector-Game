@@ -1,17 +1,25 @@
 .container {
       /* Centers */
       margin: auto;
-      margin-top: 100px;
-      margin-bottom: 100px;
+      margin-top: 20px;
+      margin-bottom: 20px;
       text-align: center;
-      border: 8px outset white;
+      border: 4px double #ff4255;
       background: white; 
       width: 1000px;
 }
 
+h1 {
+/* Adds margin above h1 */
+margin-top: 50px;
+font-family: 'Lilita One', cursive; /* Google Font */
+font-size: 50px;
+}
+
 body {
-    /* Following prevents image from stretching  */
-    background: url("../../assets/images/diamonds.png");
+background: url("../../assets/images/congruentpentagon.png");
+font-family: 'Rajdhani', sans-serif; /* Google Font */
+line-height: 1.5;
 }
 
 /* Four image containers  */
@@ -29,13 +37,33 @@ body {
     display: table;
 }
 
+/* Sets sizing for crystals and centers in container */
 .crystals {
     max-width: 500px;
     background: white;
-    margin-left: 265px;
+    margin-left: 258px;
 }
+
+/* Aligns crystals horizontally from bottom */
+#crystal1 {
+    margin-top: 2px;
+}
+
+#crystal2 {
+    margin-top: 4px;
+}
+
+#crystal3 {
+    margin-top: 4px;
+}
+
 
 /* Removes bullet points from directions */
 ul {
     list-style: none;
+}
+
+/* Adds spacing below total score */
+#totalscore {
+    margin-bottom: 50px;
 }
