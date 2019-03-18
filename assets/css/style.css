@@ -17,9 +17,19 @@ font-size: 50px;
 color: #34be8d;
 }
 
+h2 {
+    color: #5e5e5e;
+}
+
+h4 {
+    font-size: 24px;
+    color: #5e5e5e;
+}
+
 body {
 background: url("../../assets/images/congruentpentagon.png");
 font-family: 'Rajdhani', sans-serif; /* Google Font */
+color: #5e5e5e;
 line-height: 1.5;
 }
 
