@@ -56,7 +56,6 @@ function reset(){
     $('#totalscore').text(totalScore);
     } 
 
-
 // Function to updates user's wins and losses
 // Adds plus 1 to wins
 function winner(){
@@ -89,6 +88,8 @@ $('#crystal1').on ('click', function(){
 
     // Plays audio for crystal click
     $(crystalSound1).trigger('play');
+    // Adds flash effect
+    $('#crystal1').fadeOut(100).fadeIn(100).delay(100);
 
     // Adds crystal score to total score
     totalScore = totalScore + crystal1;
@@ -109,6 +110,8 @@ $('#crystal2').on ('click', function(){
 
     // Plays audio for crystal click
     $(crystalSound2).trigger('play');
+    // Adds flash effect
+    $('#crystal2').fadeOut(100).fadeIn(100).delay(100);
 
     // Adds crystal score to total score
     totalScore = totalScore + crystal2;
@@ -129,6 +132,8 @@ $('#crystal3').on ('click', function(){
 
     // Plays audio for crystal click
     $(crystalSound3).trigger('play');
+    // Adds flash effect
+    $('#crystal3').fadeOut(100).fadeIn(100).delay(100);
 
     // Adds crystal score to total score
     totalScore = totalScore + crystal3;
@@ -149,6 +154,8 @@ $('#crystal4').on ('click', function(){
 
     // Plays audio for crystal click
     $(crystalSound4).trigger('play');
+    // Adds flash effect
+    $('#crystal4').fadeOut(100).fadeIn(100).delay(100);
 
     // Adds crystal score to total score
     totalScore = totalScore + crystal4;
@@ -166,18 +173,3 @@ $('#crystal4').on ('click', function(){
 
 }
 )
-
-
-
-// // Function to update the DOM
-// updateDisplay()
-// }
-
-// // Updates HTML to show wins, curent word, remaining guesses, and letters already guessed
-// function updateDisplay() {
-//     document.getElementById("randomnumber").innerHTML = randomNumber
-//     document.getElementById("wins").innerHTML = wins
-//     document.getElementById("losses").innerHTML = losses
-//     document.getElementById("totalscore").innerHTML = totalScore
-// }
-

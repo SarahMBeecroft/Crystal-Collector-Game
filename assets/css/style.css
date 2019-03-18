@@ -4,16 +4,17 @@
       margin-top: 20px;
       margin-bottom: 20px;
       text-align: center;
-      border: 4px double #ff4255;
+      border: 4px double #e67cbf;
       background: white; 
       width: 1000px;
 }
 
 h1 {
 /* Adds margin above h1 */
-margin-top: 50px;
+margin-top: 20px;
 font-family: 'Lilita One', cursive; /* Google Font */
 font-size: 50px;
+color: #34be8d;
 }
 
 body {
@@ -61,9 +62,14 @@ line-height: 1.5;
 /* Removes bullet points from directions */
 ul {
     list-style: none;
+    padding-bottom: 20px;
 }
 
 /* Adds spacing below total score */
 #totalscore {
     margin-bottom: 50px;
 }
+
+
+
+    
