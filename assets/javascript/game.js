@@ -33,6 +33,7 @@ crystalSound4.setAttribute("src", "assets/audio/crystal4.wav")
 winningSound.setAttribute("src", "assets/audio/winningsound.wav")
 losingSound.setAttribute("src", "assets/audio/losingsound.wav")
 
+
 //============================================================================
 
 // Game code
